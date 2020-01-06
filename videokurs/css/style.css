@@ -1,0 +1,450 @@
+@font-face {
+    font-family: "MuseoSansRegular";
+    src: url("../fonts/MuseoSansRegular/MuseoSansRegular.eot");
+    src: url("../fonts/MuseoSansRegular/MuseoSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansRegular/MuseoSansRegular.woff") format("woff"),
+    url("../fonts/MuseoSansRegular/MuseoSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MuseoSansBold"; */
+@font-face {
+    font-family: "MuseoSansBold";
+    src: url("../fonts/MuseoSansBold/MuseoSansBold.eot");
+    src: url("../fonts/MuseoSansBold/MuseoSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansBold/MuseoSansBold.woff") format("woff"),
+    url("../fonts/MuseoSansBold/MuseoSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MuseoSansBlack"; */
+@font-face {
+    font-family: "MuseoSansBlack";
+    src: url("../fonts/MuseoSansBlack/MuseoSansBlack.eot");
+    src: url("../fonts/MuseoSansBlack/MuseoSansBlack.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansBlack/MuseoSansBlack.woff") format("woff"),
+    url("../fonts/MuseoSansBlack/MuseoSansBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MuseoSansLight"; */
+@font-face {
+    font-family: "MuseoSansLight";
+    src: url("../fonts/MuseoSansLight/MuseoSansLight.eot");
+    src: url("../fonts/MuseoSansLight/MuseoSansLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansLight/MuseoSansLight.woff") format("woff"),
+    url("../fonts/MuseoSansLight/MuseoSansLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MuseoSansMedium"; */
+@font-face {
+    font-family: "MuseoSansMedium";
+    src: url("../fonts/MuseoSansMedium/MuseoSansMedium.eot");
+    src: url("../fonts/MuseoSansMedium/MuseoSansMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MuseoSansMedium/MuseoSansMedium.woff") format("woff"),
+    url("../fonts/MuseoSansMedium/MuseoSansMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'pfdinmedium';
+    src: url('../fonts/pfdin/pfdintextcomppro-medium-webfont.eot');
+    src: url('../fonts/pfdin/pfdintextcomppro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdin/pfdintextcomppro-medium-webfont.woff2') format('woff2'),
+         url('../fonts/pfdin/pfdintextcomppro-medium-webfont.woff') format('woff'),
+         url('../fonts/pfdin/pfdintextcomppro-medium-webfont.ttf') format('truetype'),
+         url('../fonts/pfdin/pfdintextcomppro-medium-webfont.svg#pfdinmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family:MuseoSansMedium;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#221650+0,381245+100 */
+	background: rgb(34,22,80); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(34,22,80,1) 0%, rgba(56,18,69,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(34,22,80,1) 0%,rgba(56,18,69,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(34,22,80,1) 0%,rgba(56,18,69,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#221650', endColorstr='#381245',GradientType=0 ); /* IE6-9 */
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #000;
+	text-decoration: underline;
+}
+a:hover {
+	color: #000;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #000;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.round-con{
+	border-radius:10px;
+}
+/* --------------- /базовые настройки ---------*/
+
+.main{
+	max-width:1050px; margin:0 auto; padding:0 10px; min-width:950px;
+}
+.logo{
+	float:left; position:relative; top:5px;
+}
+.main-nav{
+	float:right; list-style:none; background:#4157ac; font-family:MuseoSansLight; padding:0 20px;
+}
+	.main-nav li{
+		float:left; 
+	} 
+		.main-nav li a{
+			display:block;  padding:15px 22px; color:#fff; text-decoration:none; font-size:0.8em; border-bottom:1px solid #4157ac;
+		}
+		.main-nav li a:hover{
+			border-bottom:1px solid #fff;
+		}
+header{
+	padding:40px 0; 
+}
+
+main{
+	width:61%; float:left;
+}
+	a.partblock{
+		color:#000; text-decoration:none;
+	}
+	a:hover.partblock{
+		color:#fff;
+	}
+	a:hover.partblock .bg1{
+		background:#4157ac url(../images/part1-main-h.png) 50px center no-repeat;
+	}
+	a:hover.partblock .bg2{
+		background:#4157ac url(../images/part2-main-h.png) 50px center no-repeat;
+	}
+	
+	a:hover.partblock .bg3{
+		background:#4157ac url(../images/bonus1-m-h.png) 30px center no-repeat;
+	}
+	a:hover.partblock .bg4{
+		background:#4157ac url(../images/bonus2-m-h.png) 30px center no-repeat;
+	}
+	a:hover.partblock .bg5{
+		background:#4157ac url(../images/bonus3-m-h.png) 33px center no-repeat;
+	}
+	a:hover.partblock .bg6{
+		background:#4157ac url(../images/bonus4-m-h.png) 31px center no-repeat;
+	}
+	a:hover.partblock .bg7{
+		background:#4157ac url(../images/bonus5-m-h.png) 30px center no-repeat;
+	}
+	.content-part1-lessons-main{
+		border-radius: 10px; height:315px; padding:0px 0px 0px 50px; margin-bottom:10px; 
+	}
+	.bg1{
+		background:#fff url(../images/part1-main.png) 50px center no-repeat;
+	}
+	.bg2{
+		background:#fff url(../images/part2-main.png) 50px center no-repeat;
+	}
+	.bg3{
+		background:#fff url(../images/bonus1-m.png) 30px center no-repeat;
+	}
+	.bg4{
+		background:#fff url(../images/bonus2-m.png) 30px center no-repeat;
+	}
+	.bg5{
+		background:#fff url(../images/bonus3-m.png) 33px center no-repeat;
+	}
+	.bg6{
+		background:#fff url(../images/bonus4-m.png) 31px center no-repeat;
+	}
+	.bg7{
+		background:#fff url(../images/bonus5-m.png) 30px center no-repeat;
+	}
+	.content-disc-lessons-head-main{
+		overflow:hidden; padding-top:70px; padding-left:225px;
+	} 
+	
+	.content-disc-lessons-head-main img{
+		float:left; margin:0 30px 0 0;
+	}
+	.content-disc-lessons-head-main h3{
+		font-family: "MuseoSansBlack"; font-size:1.5em; padding-right:30px; margin-top:35px;
+	}
+	.content-disc-lessons-head-main h2{
+		font-family: "MuseoSansMedium"; font-size:1.5em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-bonus-lessons-main{
+		border-radius: 10px; margin-bottom:10px; height:120px; padding:0 0 0 30px;
+	}
+	.content-bonus-lessons-head-main{
+		overflow:hidden; padding-left:90px;
+	}
+	
+	.content-bonus-lessons-head-main img{
+		float:left; margin:0 20px 0 0;
+	}
+	.content-bonus-lessons-head-main h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px;
+	}
+	.content-bonus-lessons-head-main h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+.pad25{
+	padding-top:25px;
+}
+.pad16{
+	padding-top:16px;
+}
+.mar8{
+	margin-top:8px;
+}
+	
+	.content-part1-lessons{
+		background:#fff; border-radius: 10px; padding:25px 10px 20px 30px; margin-bottom:10px;
+	}
+	.content-disc-lessons-head{
+		overflow:hidden; margin-bottom:25px; border-bottom:1px solid #eceef0; padding-bottom:30px;
+	}
+	
+	.content-disc-lessons-head img{
+		float:left; margin:0 25px 0 0;
+	}
+	.content-disc-lessons-head h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px;
+	}
+	.content-disc-lessons-head h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-disc-lessons-head1{
+		overflow:hidden; margin-bottom:25px; border-bottom:1px solid #eceef0; padding-bottom:30px; padding-left:90px; background:url(../images/bonus1-m.png) 0px 2px no-repeat;
+	}
+	
+	.content-disc-lessons-head1 h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px; margin-top:8px;
+	}
+	.content-disc-lessons-head1 h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-disc-lessons-head2{
+		margin-bottom:25px; border-bottom:1px solid #eceef0; padding-bottom:30px; padding-left:90px; background:url(../images/bonus2-m.png) 0px 20px no-repeat;
+	}
+	
+	.content-disc-lessons-head2 h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px; margin-top:-9px;
+	}
+	.content-disc-lessons-head2 h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-disc-lessons-head3{
+		margin-bottom:25px; border-bottom:1px solid #eceef0; padding-bottom:30px; padding-left:90px; background:url(../images/bonus3-m.png) 3px 8px no-repeat;
+	}
+	.content-disc-lessons-head3 h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px; margin-top:0px;
+	}
+	.content-disc-lessons-head3 h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-disc-lessons-head4{
+		margin-bottom:25px; border-bottom:1px solid #eceef0; padding-bottom:30px; padding-left:90px; background:url(../images/bonus4-m.png) 1px 5px no-repeat;
+	}
+	.content-disc-lessons-head4 h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px; margin-top:0px;
+	}
+	.content-disc-lessons-head4 h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-disc-lessons-head5{
+		margin-bottom:25px; border-bottom:1px solid #eceef0; padding-bottom:30px; padding-left:90px; background:url(../images/bonus5-m.png) 1px 2px no-repeat;
+	}
+	.content-disc-lessons-head5 h3{
+		font-family: "MuseoSansBlack"; font-size:1em; padding-right:30px; margin-top:3px;
+	}
+	.content-disc-lessons-head5 h2{
+		font-family: "MuseoSansMedium"; font-size:1em; margin:5px 0 0 0;  padding-right:30px; 
+	}
+	
+	.content-disc-lessons-in p{
+		padding-bottom:10px; font-size:0.875em;
+	}
+	.content-disc-lessons-in p span{
+		padding-right:0;
+	}
+	.content-disc-lessons-in p a{
+		color:#000; text-decoration:none;
+	}
+	.content-disc-lessons-in p a:hover{
+		text-decoration: underline;
+	}
+	.content-disc-lessons-in p img{
+		margin-left:10px; vertical-align:middle;
+	}
+	.dop_mat-razdel{
+		clear:both; margin-top:20px; color:#171616; font-size:0.75em;
+	}
+	.dop_mat-razdel img{
+		margin:0 10px 0 0; vertical-align:middle;
+	}
+	.dop_mat-razdel a{
+		color:#000; text-decoration:none;
+	}
+	.dop_mat-razdel a:hover{
+		text-decoration: underline;
+	}
+aside{
+	width:37%; float:right;
+}
+.footer-main{ 
+	font-family:MuseoSansRegular;  margin:0 auto; padding:30px 0; color:#fff;
+}
+	.logo-foot{
+		float:left;
+	}
+	.content-foot{
+		float:left; font-size:0.75em;
+	}
+	.content-foot p{
+		float:left; background:url(../images/d1-marker-foot.png) left center no-repeat; padding:0 0 0 37px; margin:0 0 0 37px;
+	}
+.lessonprat1vid{
+	background:#fff; padding: 15px 30px 35px 30px; margin-bottom: 30px;
+}
+.video-block {
+    margin: 0 auto 20px auto;
+    width: 940px;
+}
+
+.video-header{
+		margin:0 0 20px 0; font-size:1em; 
+	}
+		.video-header p{
+			color:#000; font-family:"MuseoSansBlack"; text-align:center;
+		}
+			.video-header p span{
+				color:#000; font-family:"MuseoSansRegular";
+			}
+		.video-header img{
+			float:right; margin-left:10px;
+		}
+		.video-block{
+			margin:0 auto 20px auto; width:940px;
+		}
+	.video-footer p{
+		font-size:1em; font-family:"MuseoSansMedium";
+	}		
+	.video-footer p img{
+		vertical-align:middle; margin:0 10px;
+	}
+	.video-footer p a{
+		color:#000; text-decoration:none;
+	}
+	.video-footer p a:hover{
+		text-decoration:underline;
+	}
+	.video-footer-left{
+		float:left;
+	}
+	.video-footer-right{
+		float:right;
+	}
+	.video-footer-center{
+		text-align:center;
+	}	
+	
+@media screen and (max-width:1022px){
+	.logo{
+		float:none; position:relative; top:5px; display:block; margin:0 auto 15px auto;
+	}	
+	.main-nav{
+		float:none; list-style:none; background:#4157ac; font-family:MuseoSansLight; padding:0 20px; display:table; margin:0 auto;
+	}
+	header {
+		padding: 20px 0;
+	}
+}	
